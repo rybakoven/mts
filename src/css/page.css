@@ -1,0 +1,38 @@
+.title {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 321px) {
+    #channels-container {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #channels-container {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    #channels-container {
+        width: 1200px;
+    }
+}
+
+#channels-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#page .channel-item {
+    width: 160px;
+    height: 96px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 23px 16px;
+    background-size: cover;
+}
+

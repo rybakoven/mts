@@ -1,0 +1,25 @@
+.tab_wrapper {
+    display: flex;
+}
+.tab {
+    margin-right: 10px;
+    padding: 20px 36px;
+    text-decoration: none;
+    color: #fff;
+}
+.tab:hover {
+    color: #BA9D5A;
+}
+.tab.active {
+    font-weight: bold;
+    border-bottom: 2px solid #BA9D5A;
+    cursor: default;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
