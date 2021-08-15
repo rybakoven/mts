@@ -1,3 +1,5 @@
+import Tabs from './modules/tabs'
+
 class Channels {
   constructor() {
     this.container = document.querySelector('#channels-container');
@@ -5,6 +7,7 @@ class Channels {
     this.sortType = 1;
     this.channelsJSON = null;
     this.getChannels();
+    this.tabs = new Tabs();
   }
 
   async getChannels () {
@@ -50,9 +53,8 @@ class Channels {
 
   prepareDataForPage() {
     const currentStack = this.currentPage * 24;
-    let currentChannels = this.channelsJSON.slice(currentStack, currentStack + 24);
     //sort
-    return currentChannels;
+    return this.channelsJSON.slice(currentStack, currentStack + 24);
   }
 
   sort() {
