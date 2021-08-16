@@ -1,11 +1,12 @@
 import Tabs from './modules/tabs'
+import Sort from './modules/filters'
 
 class Channels {
   constructor() {
     this.container = document.querySelector('#channels-container');
-    this.currentPage = 1;
-    this.sortType = 1;
+    this.currentPage = 0;
     this.channelsJSON = null;
+    this.prepareData = null;
     this.getChannels();
     this.tabs = new Tabs();
   }
@@ -21,16 +22,20 @@ class Channels {
       .catch(error => console.log(error.message));
   }
 
-  render() {
-    const currentChannels = this.prepareDataForPage();
+  empty() {
+    this.container.innerHTML = '';
+  }
+
+  render(sortData) {
+    this.empty();
+
+    const currentChannels = this.prepareDataForPage(sortData);
 
     currentChannels.forEach(channel => {
 
       let node = document.createElement('div');
       node.classList.add('channel-item');
       node.style.backgroundImage = `url(${channel.picture.backgrounds[0]})`;
-
-      //
 
       this.container.append(node);
     });
@@ -51,15 +56,13 @@ class Channels {
     });
   }
 
-  prepareDataForPage() {
+  prepareDataForPage(sortData) {
+    this.prepareData = sortData || new Sort(this.channelsJSON);
     const currentStack = this.currentPage * 24;
-    //sort
-    return this.channelsJSON.slice(currentStack, currentStack + 24);
-  }
-
-  sort() {
-
+    return this.prepareData.slice(currentStack, currentStack + 24);
   }
 }
 
 const channels = new Channels();
+
+export default channels

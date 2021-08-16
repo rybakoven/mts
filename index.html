@@ -21,15 +21,23 @@
             </nav>
 
             <div class="filters">
-                <div class="filter-item sort">
-                    Сортировка
-                </div>
-
-                <div id="filter" class="filter-item active">
-                    <div class="filter-header">Телеканалы</div>
+                <div id="sort" class="filter-item">
+                    <a href="#" class="filter-header">
+                        Сортировка
+                    </a>
                     <div class="filter-popup">
                         <div class="filter-main-items">
-                            <a href="#" class="filter-popup_item">Телеканалы</a>
+                            <a href="#" class="filter-popup_item" data-sort="asc">По возрастанию (А-Я)</a>
+                            <a href="#" class="filter-popup_item" data-sort="desc">По убыванию (Я-А)</a>
+                        </div>
+                        <a href="#" class="filter-popup_item reset-filter" data-sort="def">По умолчанию</a>
+                    </div>
+                </div>
+
+                <div id="filter" class="filter-item">
+                    <a href="#" class="filter-header">Телеканалы</a>
+                    <div class="filter-popup">
+                        <div class="filter-main-items">
                             <a href="#" class="filter-popup_item">Все телеканалы</a>
                             <a href="#" class="filter-popup_item">Жанр 1</a>
                             <a href="#" class="filter-popup_item">Жанр 2</a>
@@ -39,7 +47,7 @@
                 </div>
             </div>
         </div>
-x`
+
         <div class="header-separator"></div>
     </div>
 

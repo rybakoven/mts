@@ -3,15 +3,18 @@
     flex-direction: row;
     position: absolute;
     right: 100px;
+    margin-top: 9px;
 }
 
 .filter-item {
     border: 1px solid #415165;
     border-radius: 5px;
     background: transparent;
-    padding: 17px;
     font-size: 17px;
     align-items: flex-start;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
 }
 
 .filter-item.active {
@@ -30,27 +33,35 @@
     width: 164px;
 }
 
-#filter.active .filter-popup {
+.filter-item.active .filter-popup {
     display: block;
 }
 
-.filter-header {
+.filter-item .filter-header {
+    padding: 8px 17px;
+    display: block;
+    color:#fff;
+    text-decoration: none;
+}
 
+#sort .filter-header {
+    width: 166px;
 }
 
 .filter-popup {
     position: absolute;
     top: 100%;
     margin-top: 3px;
-    margin-left: -17px;
     list-style: none;
     background-color: #fff;
-    width: 100%;
     border: 1px solid #BA9D5A;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     display: none;
+    white-space: nowrap;
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .filter-main-items {

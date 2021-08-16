@@ -24,6 +24,11 @@
 #channels-container {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: -9px;
+}
+
+#page {
+    padding: 0 0 0 141px;
 }
 
 #page .channel-item {
@@ -31,7 +36,7 @@
     height: 96px;
     border-radius: 5px;
     overflow: hidden;
-    margin: 23px 16px;
+    margin: 11px 9px;
     background-size: cover;
 }
 
