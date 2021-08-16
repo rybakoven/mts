@@ -3,7 +3,7 @@ import Sort from './modules/filters'
 
 class Channels {
   constructor() {
-    this.container = document.querySelector('#channels-container');
+    this.container = document.querySelector('#channels');
     this.currentPage = 0;
     this.channelsJSON = null;
     this.prepareData = null;

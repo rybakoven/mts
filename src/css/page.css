@@ -22,9 +22,13 @@
 }
 
 #channels-container {
+    margin-left: -9px;
+}
+
+#channels {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: -9px;
 }
 
 #page {
@@ -37,6 +41,11 @@
     border-radius: 5px;
     overflow: hidden;
     margin: 11px 9px;
-    background-size: cover;
+    background-size: contain;
+}
+
+#page .channel-item:hover {
+    transform: translate(0,-8px);
+    transition: transform 1s;
 }
 
